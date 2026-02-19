@@ -1,8 +1,19 @@
 *{
     background-color: aliceblue;
-    font-family:monospace;
+    font-family: sans-serif;
+    color: #333;
     margin: 0;
 }
+#header{
+    background-image: url();
+    width: 100%;
+    min-height: 80vh;
+    background-size: cover;
+    background-position: center;
+    display: flex; 
+    flex-direction: column;
+}
+
 .pricing {
     background-color: black;
     width: 150px;
@@ -34,20 +45,30 @@
     border-radius: 15px;
     color: aliceblue;
 }
+h1 {
+    background-color: unset;
+}
+h1 + p {
+    background-color: unset;
+}
 .nav-bar {
     height: 60px;
     display: flex;
+    background-color: aliceblue;
     justify-content: space-between;
     align-items: center;
     padding: 15px 40px;
-    box-shadow: 0 2px 5px, rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
     border-bottom: 1px solid #E5E5E5;
+    top: 0;
 }
 nav a {
-    text-decoration: none;  /* Removes the underline */
-    color: #333;      /* Dark grey text */
+    text-decoration: none;
+    color: #333;
     font-family: sans-serif;
     font-weight: bold;
+    transform: translateY(-5px);
 }
 .logo {
     flex: 1;
@@ -72,6 +93,7 @@ nav a {
 .login-btn {
     text-decoration: none;
     color: #333;
+    transform: translateY(-5px);
 }
 
 .signup-btn {
@@ -79,20 +101,28 @@ nav a {
     background-color: orchid;
     color: aliceblue;
     padding: 10px 20px;
-    border-radius: 20px; /* Rounded corners */
+    border-radius: 20px;
     font-weight: bold;
+    transform: translateY(-5px);
 }
+.signup-btn:hover {
+    color: #333;
+    transition: 0.3s ease;
+}
+
 nav a:hover {
-    color: orchid;   /* Turns Pink when you mouse over */
+    color: orchid;
+    transition: 0.3s ease
+
 }
 li a {
-    text-decoration: none;  /* Removes the underline */
-    color: #333;      /* Dark grey text */
+    text-decoration: none;
+    color: #333;
     font-family: sans-serif;
 }
 
 li a:hover {
-    color: orchid;   /* Turns Pink when you mouse over */
+    color: orchid;
 }
 .features{
     border: 1px solid;
@@ -104,57 +134,52 @@ li a:hover {
     margin: 10px;
 }
 
-/* Parent Container (Same as before) */
 .features-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 50px 20px; /* Added side padding for mobile safety */
+    padding: 50px 20px;
 }
 
-/* Individual Card */
+
 .feature-card {
     background-color: aliceblue;
     
-    /* 1. INTERNAL SPACING (The "Margin all round") */
+    
     padding: 40px; 
     
     border-radius: 16px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); /* Softer shadow */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 
-    /* 2. FLEXBOX FOR LEFT ALIGNMENT */
     display: flex;
-    flex-direction: column; /* Stacks items vertically */
-    align-items: flex-start; /* Aligns everything to the LEFT */
-    text-align: left;        /* Ensures text paragraphs align left */
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
 }
 
-/* Hover Effect */
 .feature-card:hover {
-    transform: translateY(-10px); /* Moves up slightly */
+    transform: translateY(-10px);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
 }
 
-/* Icon Styling */
 .icon-wrapper {
-    background-color: aliceblue; /* Very light pink background */
-    color: orchid;            /* Icon color (Darker Pink) */
+    background-color: aliceblue;
+    color: orchid;
     width: 60px;
     height: 60px;
-    border-radius: 50%;        /* Makes it a circle */
+    border-radius: 50%;
     display: flex;
-    justify-content: center;   /* Centers the SVG inside the circle */
+    justify-content: center;
     align-items: center;
-    margin-bottom: 25px;       /* Space between Icon and Title */
+    margin-bottom: 25px;
 }
 
-/* Typography */
 .feature-card h3 {
-    margin: 0 0 15px 0;        /* Removes top margin, adds bottom margin */
-    color: #2D3436;
+    margin: 0 0 15px 0;
+    color: orchid;
     font-size: 1.25rem;
 }
 
@@ -209,6 +234,18 @@ li a:hover {
     flex-direction: column;
 }
 
+.howto-card h3 {
+    margin: 0 0 15px 0;
+    color: orchid;
+    font-size: 1.25rem;
+}
+
+.howto-card p {
+    margin: 0;
+    color: #636e72;
+    line-height: 1.6;
+}
+
 .howto-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
@@ -228,3 +265,8 @@ li a:hover {
     align-items: center;
 }
 
+.testimony-card p {
+    margin: 0;
+    color: #636e72;
+    line-height: 1.6;
+}
